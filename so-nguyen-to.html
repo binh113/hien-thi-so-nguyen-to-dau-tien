@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = 2;
+    let count = 0;
+    let amount = parseInt(prompt("Enter amount of prime number first:"))
+    let result = "";
+    let i;
+    while (count < amount) {
+        let prime = true
+        for (i = 2; i < num; i++) {
+            if (num % i === 0) {
+                prime = false;
+                break;
+            }
+        }
+        if (prime === true) {
+            if (count === amount) {
+                result = result + num
+            } else {
+                result = result + num + "<br>"
+            }
+            count++
+        }
+        num++
+    }
+    document.write(result);
+</script>
+</body>
+</html>
